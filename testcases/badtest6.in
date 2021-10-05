@@ -1,0 +1,26 @@
+#diff__ variable with two '_'
+
+program badtest6
+  float a, b, result, diff__;
+  
+  [* declaration of the 
+  duplicate_bigger procedure*]
+  proc duplicate_bigger(float => a; float => b; float <= result)
+  {
+    if a>b {
+     result = a*2;
+    };
+  }
+{
+  read(a);
+  read(b);
+  #duplicate_bigger(a, b, result); procedure calls unsupported
+  do {
+    println(result);
+    result = result + 5;            
+  } until result <= 1000
+  else {
+    diff__ = result - 1000; 
+    println(diff__);
+  };
+}

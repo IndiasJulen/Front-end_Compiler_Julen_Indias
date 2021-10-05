@@ -1,0 +1,31 @@
+#do_until_else test and if statement
+
+program test4
+  float a, b, result, diff;
+  
+  [* declaration of the 
+  duplicate_bigger method*]
+  proc duplicate_bigger(float => a; float => b; float <= result)
+  {
+    if a>b {
+     result = a*2;
+    }; 
+    if b>a {
+     result = b*2;
+    };
+  }
+{
+  read(a);
+  read(b);
+  result = 5;
+  #duplicate_bigger(a, b, result); method calls unsupported
+  do {
+    println(result);
+    result = result + 5;
+  } until result <= 1000
+  else {
+    diff = result - 1000; [*calculate the difference between the result
+                          and 1000, to get the error*]
+    println(diff);
+  };
+}

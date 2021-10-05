@@ -1,0 +1,23 @@
+# do-until-else + skip-if test
+
+program test5
+    int a, b, c, i;
+    #test of the do-until-else + skip-if combination
+{
+    a = 1;
+    b = 2;
+    c = 3;
+    i = 0;
+
+    do {
+        a = a * 2;
+        b = b + 1;
+        c = c + 20;
+        skip if b > 10;
+        println(i);
+        i = i + 1;
+    } until a > 30
+    else {
+        println(a);
+    };
+}

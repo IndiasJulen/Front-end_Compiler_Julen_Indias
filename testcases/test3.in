@@ -1,0 +1,28 @@
+#while_forever + do_until_else + exit test
+
+program test3
+  int a, b, i, j;
+
+{
+  read(a);
+  read(b);
+  i = 0;
+  while forever {
+    j = 0;
+    do {
+      a = a*2;
+      b = b*2;
+      j = j+1;
+    } until j == 100
+    else {
+      println(a);
+      println(b);
+    };
+    if (i == 100) {
+      exit;
+    };
+    i = i+1;
+  };
+  println(i);
+  println(j);
+}

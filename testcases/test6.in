@@ -1,0 +1,20 @@
+# while_forever + exit test
+
+program test6
+    int x, i;
+    [*testing of the while forever and if statement together
+    we get a regular while(expression) structure, which is unsupported in our language*]
+{
+    x = 0;
+    i = 0;
+    while forever {
+        x = x + 5;
+        i = i + 1;
+        if i >= 20 {
+            exit;
+        };
+        println(1);
+    };
+    println(x);
+    println(i);
+}

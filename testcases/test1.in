@@ -1,0 +1,11 @@
+program test1
+
+# this is a comment
+[* this is also
+  a comment *]
+
+{
+
+   a = 0.4756 ;
+
+}

@@ -1,0 +1,29 @@
+#if-else is not in our language
+
+program badtest3
+  float a, b, result, diff;
+  
+  [* declaration of the 
+  duplicate_bigger procedure*]
+  proc duplicate_bigger(float => a; float => b; float <= result)
+  {
+    if a>b {
+     result = a*2;
+    }
+    else {	
+     result = b*2;
+    };
+  }
+{
+  read(a);
+  read(b);
+  #duplicate_bigger(a, b, result); procedure calls unsupported
+  do {
+    println(result);
+    result = result + 5;            
+  } until result <= 1000
+  else {
+    diff = result - 1000; 
+    println(diff); 
+  };
+}

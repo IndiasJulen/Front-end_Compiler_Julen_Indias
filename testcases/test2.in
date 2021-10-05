@@ -1,0 +1,27 @@
+program test2 
+  int a, b, c;
+  float d, e; [* this is a 
+		multiple-line comment *]
+  proc sum(int => x; int => y; int <=> result)
+	  int aux, iters;   
+  {  aux = y; result = x;
+	  if result < 1000 {
+	    iters = 0;
+	   do { 
+     	      result = result + 1;
+	      skip if result > 100000;
+     	      aux = aux - 1;
+     	      iters = iters + 1;
+     	} until aux == 0 
+	else {
+	     if result < 0 { exit; };
+	     println(iters);
+      }; # do finish
+    }; # if finish
+  } # proc finish
+{ read(a); read(b);
+  d = 1/b;
+  [*batu(a,b,c);  method calls unsupported *]
+  c = c*(c*d)+e;
+  println(c);
+}

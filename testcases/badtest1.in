@@ -1,0 +1,11 @@
+# *] in the middle of the comment
+program badtest1 
+   
+[* this is a comment but
+   it has *] in the middle *]
+   
+{
+
+   a = a * 0.4756 ;
+
+}

@@ -1,0 +1,24 @@
+#regular while structure (with an expression) instead of the while forever which is the one that is in our language
+
+program badtest7
+  float a, b, result, diff;
+  
+  [* declaration of the 
+  duplicate_bigger procedure*]
+  proc duplicate_bigger(float => a; float => b; float <= result)
+  {
+    if a>b {
+     result = a*2;
+    };
+  }
+{
+  read(a);
+  read(b);
+  #duplicate_bigger(a, b, result); procedure calls unsupported
+  while result <= 100 {
+    println(result);
+    result = result + 5; 
+  };
+  diff = result - 1000; 
+  println(diff);
+}

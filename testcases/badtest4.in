@@ -1,0 +1,22 @@
+#do-until-else without the else
+
+program badtest4
+  float a, b, result, diff;
+  
+  [* declaration of the 
+  duplicate_bigger procedure*]
+  proc duplicate_bigger(float => a; float => b; float <= result)
+  {
+    if a>b {
+     result = a*2;
+    };
+  }
+{
+  read(a);
+  read(b);
+  #duplicate_bigger(a, b, result); procedure calls unsupported
+  do {
+    println(result);
+    result = result + 5;           
+  } until result <= 1000
+}

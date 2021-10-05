@@ -1,0 +1,23 @@
+# istead of separating the parameters with ; use ,
+
+program badtest1
+  int x, y, z; #the variables to be switched
+  [*declaration os the 
+  switch procedure*]
+  proc switch(int<=>a, int<=>b, int<=>c) 
+    int lag;
+    {
+      lag = a;
+      a = b; 			
+      b = c;			  
+      c = lag;
+    } #end of the procedure 
+{
+  read(x);
+  read(y);
+  read(z);
+  #switch(x,y,z); procedure calls unsupported
+  println(x);
+  println(y);
+  println(z);
+} [*end of the program*]
